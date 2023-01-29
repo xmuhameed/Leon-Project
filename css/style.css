@@ -384,6 +384,12 @@ i:hover {
     flex-direction: row;
     justify-content: space-around;
 }
+@media (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
  .about .about-content .image {
     max-width: 20%;
     position: relative;
@@ -391,6 +397,11 @@ i:hover {
  .about .about-content img {
     max-width: 100%;
  }
+@media (max-width: 991px) {
+  .about .about-content .image {
+    margin: 0 auto 60px;
+  }
+}
 .about .about-content .image::before {
     content: "";
     position: absolute;
@@ -411,6 +422,12 @@ i:hover {
     border-left: 80px solid var(--main-color);
     border-bottom: 80px solid var(--main-color);
     z-index: -1;
+}
+@media (max-width: 991px) {
+  .about .about-content .image::before,
+  .about .about-content .image::after {
+    display: none;
+  }
 }
 .about .about-content .text {
     flex-basis: 70%;
@@ -471,6 +488,13 @@ i:hover {
 .contact .contact-content .icon i {
     color: var(--secand-color);
     margin-left: 10px;
+}
+@media (max-width: 767px) {
+
+    .contact .h2,
+    .contact a {
+        font-size: 25px;
+    }
 }
 /* contant end*/
 .footer {
