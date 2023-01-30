@@ -93,7 +93,7 @@ header .containar{
 }
 .lo:hover .logo {
    width: 70px;
-   border-style: none;
+   outline-style: none;
    transform:rotate(-2turn) translateX(40px);
    -webkit-transform:rotate(-2turn) translateX(40px);
    -moz-transform:rotate(-2turn) translateX(40px);
@@ -362,7 +362,7 @@ i:hover {
     -o-transform: scale(104%, 104%);
 }
 .portfolio .card:hover img {
-    border-style: none;
+    outline-style: none;
 }
 .portfolio .text {
     background-color: #fff;
