@@ -362,7 +362,7 @@ i:hover {
     -o-transform: scale(104%, 104%);
 }
 .portfolio .card:hover img {
-    outline-style: none;
+    outline-style: hidden;
 }
 .portfolio .text {
     background-color: #fff;
