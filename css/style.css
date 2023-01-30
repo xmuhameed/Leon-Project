@@ -451,6 +451,7 @@ i:hover {
     }
     .about .about-content .text {
         padding-left: 50px;
+        padding-right: 50px;
     }
     .about .about-content .text p {
         font-weight: lighter;
