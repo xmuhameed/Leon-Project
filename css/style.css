@@ -2,6 +2,10 @@
 :root {
     --main-color: #10cab7;
     --secand-color: #2c4755;
+    --third-color:#ebeced;
+    --back-color:#f6f6f6;
+    --p-color: #444;
+    --padding: 60px;
 }
 /* end var */
 /* Global Rules */
@@ -43,7 +47,7 @@ body {
 /* End Global Rules  */
 /* start componans  */
 .s-p {
-    color: #ebeced;
+    color: var(--third-color);
     font-weight: 900;
     font-size: 100px;
     text-align: center;
@@ -139,7 +143,7 @@ header .containar{
     top: calc(100% + 10px);
     right: -55px;
     list-style: none;
-    background-color: #f6f6f6;
+    background-color: var(--back-color);
     min-width: 150px;
     display: none;
     border-radius: 10px;
@@ -157,7 +161,7 @@ header .containar{
     content: "";
     border-width: 17px;
     border-style: solid;
-    border-color: transparent transparent #f6f6f6 transparent;
+    border-color: transparent transparent var(--back-color) transparent;
     position: absolute;
     right: 58px;
     top: -32px;
@@ -231,9 +235,9 @@ font-size: 19px;
 /* landing end  */
 /* features start */
 .feature {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f6f6f6
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-color: var(--back-color)
 }
 .feature .containar {
     display: grid;
@@ -274,8 +278,8 @@ i:hover {
 /* features start */
 /* services start */
 .services {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
 }
 .services .services-content {
     display: grid;
@@ -306,7 +310,7 @@ i:hover {
 .services .services-content .col .ser .text p {
     line-height: 1.6em;
     font-weight: 300;
-    color: #444;
+    color: var(--p-color);
     font-size: 16px;
 }
 .services .services-content .col .image {
@@ -332,9 +336,9 @@ i:hover {
     }
 }
 .portfolio {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f6f6f6;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-color: var(--back-color);
 }
 .portfolio .cards {
     display: grid;
@@ -369,26 +373,20 @@ i:hover {
 .portfolio .card .text p {
     line-height: 1.6em;
     font-weight: 300;
-    color: #444;
+    color: var(--p-color);
     font-size: 16px;
 }
 /* services end */
 /* about start */
 .about {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
 }
 .about .about-content {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-@media (max-width: 991px) {
-  .about .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
 }
  .about .about-content .image {
     max-width: 20%;
@@ -397,11 +395,6 @@ i:hover {
  .about .about-content img {
     max-width: 100%;
  }
-@media (max-width: 991px) {
-  .about .about-content .image {
-    margin: 0 auto 60px;
-  }
-}
 .about .about-content .image::before {
     content: "";
     position: absolute;
@@ -423,12 +416,6 @@ i:hover {
     border-bottom: 80px solid var(--main-color);
     z-index: -1;
 }
-@media (max-width: 991px) {
-  .about .about-content .image::before,
-  .about .about-content .image::after {
-    display: none;
-  }
-}
 .about .about-content .text {
     flex-basis: 70%;
     padding-left: 180px;
@@ -447,15 +434,36 @@ i:hover {
   .about .about-content .text p:last-of-type {
     line-height: 1.7em;
     font-weight: 400;
-    color: #444;
+    color: var(--p-color);
     font-size: 16px;
   }
+  @media (max-width: 992px){
+    .about .about-content {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+  }
+ @media (max-width: 770px) {
+    .about .about-content .image {
+        display: none;
+        position: absolute;
+    }
+    .about .about-content .text {
+        padding-left: 50px;
+    }
+    .about .about-content .text p {
+        font-weight: lighter;
+        font-size: 10px;
+    }
+   }
+
 /* about end */
 /* contant start*/
 .contact {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f6f6f6;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-color: var(--back-color);
 }
 .contact .containar {
     display: flex;
@@ -490,9 +498,8 @@ i:hover {
     margin-left: 10px;
 }
 @media (max-width: 767px) {
-
-    .contact .h2,
-    .contact a {
+    .contact .contact-content h2,
+    .contact .contact-content a {
         font-size: 25px;
     }
 }
@@ -508,4 +515,10 @@ i:hover {
     font-weight: bold;
     color: var(--main-color);
     text-decoration: none;
+}
+@media (max-width: 767px) {
+
+    .footer {
+        font-size: 14px;
+    }
 }
