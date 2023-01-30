@@ -93,7 +93,6 @@ header .containar{
 }
 .lo:hover .logo {
    width: 70px;
-   outline-style: none;
    transform:rotate(-2turn) translateX(40px);
    -webkit-transform:rotate(-2turn) translateX(40px);
    -moz-transform:rotate(-2turn) translateX(40px);
@@ -370,9 +369,6 @@ i:hover {
     -ms-transform: scale(104%, 104%);
     -o-transform: scale(104%, 104%);
 }
-.portfolio .card:hover img {
-    outline-style: hidden;
-}
 .portfolio .text {
     background-color: #fff;
     padding: 5px 20px;
@@ -464,7 +460,6 @@ i:hover {
     }
     .about .about-content .text {
         padding-left: 50px;
-        padding-right: 40px;
     }
     .about .about-content .text p {
         font-weight: lighter;
