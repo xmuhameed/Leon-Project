@@ -101,7 +101,7 @@ header .containar{
 }
 .links{
     position: relative;
-    z-index: 1;
+    z-index: 3;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -196,6 +196,7 @@ header .containar{
     background-size: cover;
     height: calc(100vh - 78.27px);
     position: relative;
+    z-index: 2;
 }
 .text-start {
    text-align: center;
@@ -230,6 +231,14 @@ header .containar{
 .landing .text-start p {
 line-height: 1.8;
 font-size: 19px;
+}
+.up a {
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    color: var(--main-color);
+    z-index: 1;
+    opacity: 70%;
 }
 
 /* landing end  */
